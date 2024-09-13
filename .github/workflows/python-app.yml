@@ -11,19 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v2
+
+      # Set up Python version
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
 
+      # Install dependencies
       - name: Install dependencies
         run: |
           python -m venv venv
           source venv/bin/activate
           pip install flask flask-cors
 
+      # Run the Flask app or tests
       - name: Run tests
         run: |
           source venv/bin/activate
-          # Here you would run unit tests, if any
+          # Here you would run unit tests or start your Flask app
+          # python app.py  (if running app)
