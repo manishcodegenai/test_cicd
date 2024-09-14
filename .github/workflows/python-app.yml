@@ -26,7 +26,7 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install flask flask-cors
-        working-directory: ./test_cicd
+        working-directory: /home/runner/work/test_cicd/
 
       # Run tests or start the Flask app
       - name: Run tests
@@ -34,4 +34,4 @@ jobs:
           source venv/bin/activate
           # Here you would run unit tests or start your Flask app
           # python app.py  (if running app)
-        working-directory: ./test_cicd
+        working-directory: /home/runner/work/test_cicd/
