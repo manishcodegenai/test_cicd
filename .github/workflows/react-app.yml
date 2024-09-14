@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /home/runner/work/test_cicd/
+        working-directory: /home/runner/work/test_cicd/frontend/
 
     steps:
       - uses: actions/checkout@v2
