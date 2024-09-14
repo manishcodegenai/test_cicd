@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /home/runner/work/test_cicd/
 
     steps:
       - uses: actions/checkout@v2
@@ -20,6 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
 
       - name: Run tests
         run: npm test
